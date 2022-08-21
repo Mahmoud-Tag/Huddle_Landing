@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+/* fonts 
+    font-family: 'Open Sans', sans-serif;
+      font-family: 'Poppins', sans-serif;
+*/
+:root{
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+    --white:#fff
+}
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    min-height: 100vh;
+    background: url("images/bg-desktop.svg") no-repeat;
+    background-size:cover ;
+    background-color: var(--Violet);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.3em;
+}
+.container{
+    margin: 0 auto;
+    max-width: 1320px;
+}
+.container .flex{
+    display: flex;
+    margin: 100px 0;
+}
+img{
+    max-width: 100%;
+}
+.container .left{
+    flex:0.6;
+    margin-right: 20px;
+}
+.container .right{
+    margin-left: 20px;
+    flex: 0.4;
+}
+.container .right h1{
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    margin: 25px 0;
+}
+.container .right pre{
+    color: #d1cdcd;
+    line-height: 25px;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+}
+.container .right .btn{
+    padding: 15px 60px;
+    background-color: var(--white);
+    width:max-content;
+    text-align: center;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color:var(--Violet);
+    font-family: 'Poppins', sans-serif;
+    margin-top: 25px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.container .right .btn:hover{
+    background: var(--Soft-Magenta);
+    color: var(--white);
+}
+.container  .icon ul{
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+.container  .icon ul li{
+    border: 2px solid #f8f8f8;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.container  .icon ul li i{
+    font-size: 18px;
+    color: var(--white);
+}
+.container  .icon ul li:first-child{
+    padding: 10px 15px;
+}
+.container .icon ul li:last-child{
+    padding: 10px 12px;
+}
+.container  .icon ul li:hover{
+    opacity: 0.5;
+}
+.attribution {
+    font-size: 11px; text-align: center;
+     font-family: 'Poppins', sans-serif;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+@media screen and (max-width:768px) {
+    .flex{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .flex .left{
+        flex: 1;
+        margin: 0 10px;
+    }
+    .flex .right{
+        flex:1;
+        text-align: center;
+    }
+    pre{
+        margin-bottom: 25px;
+    }
+    .flex .right .btn{
+        margin: auto;
+    }
+    .container .icon ul{
+        justify-content: center;
+    }
+}
